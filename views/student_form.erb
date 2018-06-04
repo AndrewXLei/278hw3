@@ -1,0 +1,15 @@
+<label for="sfname">First Name:</label>
+<input id="sfname" name="student[sfname]" type="text" value="<%= ::Temple::Utils.escape_html((@student.sfname)) %>" pattern="(?=.*([\w]).*)[ \w]*" required/>
+<label for="slname">Last Name:</label>
+<input id="slname" name="student[slname]" type="text" value="<%= ::Temple::Utils.escape_html((@student.slname)) %>" pattern="(?=.*([\w]).*)[ \w]*" required/>
+<label for="major">Major:</label>
+<input id="major" name="student[major]" type="text" value="<%= ::Temple::Utils.escape_html((@student.major)) %>" required/>
+<label for="gpa">Students GPA:</label>
+<input id="gpa" name="student[gpa]" step="any" type="number" value="<%= ::Temple::Utils.escape_html((@student.gpa)) %>" required/>
+<label for="birthday">Students Birthday:</label>
+<input id="birthday" name="student[birthday]" type="date" value="<%= ::Temple::Utils.escape_html((@student.birthday)) %>" required/>
+<label for="address">Students Address:</label>
+<input id="address" name="student[address]" type="text" value="<%= ::Temple::Utils.escape_html((@student.address)) %>" required/>
+<label for="sid">Students Id:</label>
+<input id="sid" name="student[sid]" type="text" value="<%= ::Temple::Utils.escape_html((@student.sid)) %>" required/>
+<input type="submit" value="Save Student" />

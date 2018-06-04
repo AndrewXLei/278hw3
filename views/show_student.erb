@@ -1,0 +1,14 @@
+
+</h1><p>First Name: <%= ::Temple::Utils.escape_html((@student.sfname)) %></p>
+<p>Last Name: <%= ::Temple::Utils.escape_html((@student.slname)) %></p>
+<p>Major:  <%= ::Temple::Utils.escape_html((@student.major)) %></p>
+<p>GPA: <%= ::Temple::Utils.escape_html((@student.gpa)) %></p>
+<p>Birthday: <%= ::Temple::Utils.escape_html((@student.birthday)) %></p>
+<p>Address: <%= ::Temple::Utils.escape_html((@student.address)) %></p>
+<p>Student Id: <%= ::Temple::Utils.escape_html((@student.sid)) %></p>
+<p><a href="/students">Back to Student List</a></p>
+<p><a href="/students/<%= ::Temple::Utils.escape_html((@student.id)) %>/edit">Edit Student Information</a></p>
+<form action="/students/<%= ::Temple::Utils.escape_html((@student.id)) %>" method="POST">
+<input name="_method" type="hidden" value="DELETE" />
+<input type="submit" value="Delete Student Information" />
+</form>
